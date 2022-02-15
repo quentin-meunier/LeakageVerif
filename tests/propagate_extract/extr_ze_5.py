@@ -8,7 +8,7 @@ from leakage_verif import *
 a = symbol('a', 'P', 8)
 n = Extract(17, 8, ZeroExt(10, a))
 
-wres = Const(0, 10)
+wres = constant(0, 10)
 
 checkResults(n, wres, pei = True)
 

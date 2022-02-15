@@ -10,6 +10,5 @@ a = ArrayExp('a', 3, 3)
 
 e = m ^ a[k ^ m]
 
-res, dummy, time = checkTpsVal(e)
-print(res)
+checkTpsResult(e, False)
 

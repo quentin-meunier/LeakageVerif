@@ -43,7 +43,7 @@ n15 = n12 & n13
 n16 = n14 & n15
 e   = n10 ^ n11 ^ n16
 
-checkTpsStrategies(e, True)
+checkTpsResult(e, True)
 
 
 

@@ -18,5 +18,3 @@ n = a ^ o
 
 n.dump('graph.dot')
 
-print('OK')
-

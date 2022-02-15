@@ -19,7 +19,7 @@ n7 = s0 ^ r0
 
 e = Concat(n0, n1, n2, n3, n4, n5, n6, n7)
 
-checkTpsStrategies(e, True)
+checkTpsResult(e, True)
 
 
 

@@ -13,6 +13,6 @@ k = symbol('k', 'S', 1)
 
 e = ((m2 & k) ^ m1) & ((~m0 ^ m1) ^ k)
 
-checkTpsStrategies(e, True)
+checkTpsResult(e, True)
 
 

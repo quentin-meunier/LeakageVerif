@@ -5,7 +5,7 @@ from __future__ import print_function
 from leakage_verif import *
 
 
-m0 = Symb('m0', 'M', 8)
+m0 = symbol('m0', 'M', 8)
 
 
 

@@ -50,7 +50,7 @@ e.printMaskOcc()
 
 res = tps(e)
 
-print(res)
+print('# Tps: %r (False expected)' % res)
 
 
 

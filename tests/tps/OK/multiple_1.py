@@ -23,8 +23,8 @@ n3 = n2 & m2
 n4 = n1 ^ n3 ^ m3
 n5 = n4 + k1
 
-n5.dump('graph.dot')
+#n5.dump('graph.dot')
 
-checkTpsStrategies(n5, True)
+checkTpsResult(n5, True)
 
 

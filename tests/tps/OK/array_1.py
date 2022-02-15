@@ -11,5 +11,5 @@ a = ArrayExp('a', 3, 3)
 
 e = m ^ a[((k ^ m) << 1) ^ (m << 1) ^ p]
 
-checkTpsStrategies(e, True)
+checkTpsResult(e, True)
 

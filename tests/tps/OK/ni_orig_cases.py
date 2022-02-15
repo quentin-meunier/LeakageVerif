@@ -18,101 +18,87 @@ p1 = symbol('p1', 'P', 8)
 p2 = symbol('p2', 'P', 8)
 
 
+n = (m0 & k0)
+checkTpsResult(n, False)
 
-setSimplifyStrategy('FAIL')
+n = (~m0 & k0)
+checkTpsResult(n, False)
 
-def check(n, val):
-    res = tps(n)
-    #if res == val:
-    #    print('[OK]')
-    #else:
-    #    print('[KO] %s' % n)
+n = (~~m0 & k0)
+checkTpsResult(n, False)
 
-#n = (m0 & k0)
-#check(n, False)
-#
-#n = (~m0 & k0)
-#check(n, False)
-#
-#n = (~~m0 & k0)
-#check(n, False)
-#
-#n = (~~~m0 & k0)
-#check(n, False)
-#
-#n = (k0 & (p0 ^ m0))
-#check(n, False)
-#
-#n = (k0 & (p0 ^ ~m0))
-#check(n, False)
-#
-#n = (k0 & (p0 ^ ~~m0))
-#check(n, False)
-#
-#
-#
-#n = (m0 ^ k0)
-#check(n, True)
-#
-#n = (~m0 ^ k0)
-#check(n, True)
-#
-#n = (~~m0 ^ k0)
-#check(n, True)
-#
-#n = (~~~m0 ^ k0)
-#check(n, True)
-#
-#n = (k0 ^ (p0 ^ m0))
-#check(n, True)
-#
-#n = (k0 ^ (p0 ^ ~m0))
-#check(n, True)
-#
-#n = (k0 ^ (p0 ^ ~~m0))
-#check(n, True)
-#
-#
-#
-#n = (m1 ^ k1) & (m0 ^ k0)
-#check(n, True)
-#
-#n = (m1 ^ k1) & (~m0 ^ k0)
-#check(n, True)
-#
-#n = (m1 ^ k1) & (~~m0 ^ k0)
-#check(n, True)
-#
-#n = (m1 ^ k1) & (~~~m0 ^ k0)
-#check(n, True)
-#
-#n = (m1 ^ k1) & (k0 ^ (p0 ^ m0))
-#check(n, True)
-#
-#n = (m1 ^ k1) & (k0 ^ (p0 ^ ~m0))
-#check(n, True)
-#
-#n = (m1 ^ k1) & (k0 ^ (p0 ^ ~~m0))
-#check(n, True)
-#
-#
-#
-#n = ((m0 ^ k0) & p0) & k2
-#check(n, False)
+n = (~~~m0 & k0)
+checkTpsResult(n, False)
+
+n = (k0 & (p0 ^ m0))
+checkTpsResult(n, False)
+
+n = (k0 & (p0 ^ ~m0))
+checkTpsResult(n, False)
+
+n = (k0 & (p0 ^ ~~m0))
+checkTpsResult(n, False)
 
 
-#n = (~((m0 ^ k0) + (k1 & m1)) & p1) ^ (m1 ^ k2)
-#check(n, True)
 
-#n = (~((m0 ^ k0) + (k1 & m0)) & p1) ^ (m0 ^ k2)
-#check(n, False)
+n = (m0 ^ k0)
+checkTpsResult(n, True)
 
-while True:
-    n = (~((m0 ^ k0) + (k1 & m1)) & p1) ^ (m0 ^ k0)
-    check(n, False)
+n = (~m0 ^ k0)
+checkTpsResult(n, True)
 
-#n = (~((m0 ^ k0) + (k1 ^ m1)) & p1) ^ (m0 ^ k0)
-#check(n, True)
+n = (~~m0 ^ k0)
+checkTpsResult(n, True)
+
+n = (~~~m0 ^ k0)
+checkTpsResult(n, True)
+
+n = (k0 ^ (p0 ^ m0))
+checkTpsResult(n, True)
+
+n = (k0 ^ (p0 ^ ~m0))
+checkTpsResult(n, True)
+
+n = (k0 ^ (p0 ^ ~~m0))
+checkTpsResult(n, True)
+
+
+
+n = (m1 ^ k1) & (m0 ^ k0)
+checkTpsResult(n, True)
+
+n = (m1 ^ k1) & (~m0 ^ k0)
+checkTpsResult(n, True)
+
+n = (m1 ^ k1) & (~~m0 ^ k0)
+checkTpsResult(n, True)
+
+n = (m1 ^ k1) & (~~~m0 ^ k0)
+checkTpsResult(n, True)
+
+n = (m1 ^ k1) & (k0 ^ (p0 ^ m0))
+checkTpsResult(n, True)
+
+n = (m1 ^ k1) & (k0 ^ (p0 ^ ~m0))
+checkTpsResult(n, True)
+
+n = (m1 ^ k1) & (k0 ^ (p0 ^ ~~m0))
+checkTpsResult(n, True)
+
+
+
+n = ((m0 ^ k0) & p0) & k2
+checkTpsResult(n, False)
+
+
+n = (~((m0 ^ k0) + (k1 & m1)) & p1) ^ (m1 ^ k2)
+checkTpsResult(n, True)
+
+n = (~((m0 ^ k0) + (k1 & m0)) & p1) ^ (m0 ^ k2)
+checkTpsResult(n, False)
+
+n = (~((m0 ^ k0) + (k1 ^ m1)) & p1) ^ (m0 ^ k0)
+checkTpsResult(n, True)
 
 
 

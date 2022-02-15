@@ -9,7 +9,7 @@ a = symbol('a', 'P', 32)
 
 n = Extract(26, 5, a << 10)
 
-wres = Concat(Extract(16, 0, a), Const(0, 5))
+wres = Concat(Extract(16, 0, a), constant(0, 5))
 
 checkResults(n, wres, pei = True)
 

@@ -14,7 +14,7 @@ n = ~(k0 ^ m) + k1
 
 #n.dump('graph.dot', True)
 
-checkTpsStrategies(n, True)
+checkTpsResult(n, True)
 
 
 

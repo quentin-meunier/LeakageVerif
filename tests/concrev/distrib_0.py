@@ -5,10 +5,10 @@ from __future__ import print_function
 from leakage_verif import *
 
 
-m0 = Symb('m0', 'M', 4)
-m1 = Symb('m1', 'M', 4)
-m2 = Symb('m2', 'M', 2)
-k0 = Symb('k0', 'S', 4)
+m0 = symbol('m0', 'M', 4)
+m1 = symbol('m1', 'M', 4)
+m2 = symbol('m2', 'M', 2)
+k0 = symbol('k0', 'S', 4)
 
 
 e0 = k0 ^ m0

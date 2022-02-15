@@ -25,9 +25,9 @@ n5 = n4 ^ m2
 n6 = n5 ^ n2
 n7 = n6 ^ n0
 
-n7.dump('graph.dot')
+#n7.dump('graph.dot')
 
-checkTpsStrategies(n7, True)
+checkTpsResult(n7, True)
 
 
 

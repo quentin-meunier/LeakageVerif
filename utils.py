@@ -144,6 +144,14 @@ def checkResults(res, ref, pei = False, usbv = False):
         print('KO')
     
 
+def checkTpsResult(exp, expected):
+    from check_leakage import checkTpsVal
+    res, t0, t1 = checkTpsVal(exp)
+    if res == expected:
+        print('OK')
+    else:
+        print('KO')
+
 
 def constant(val, width):
     return Const(val, width)

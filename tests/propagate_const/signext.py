@@ -19,5 +19,10 @@ else:
 
 
 c = SignExt(7, constant(1, 1))
-print('%s' % c)
+res = constant(0xFF, 8)
+if equivalence(c, res):
+    print('OK')
+else:
+    print('KO')
+
 

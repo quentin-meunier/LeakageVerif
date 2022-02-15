@@ -30,6 +30,6 @@ e = Concat(n0, n2, n5)
 
 #e.dump('graph.dot', True)
 
-checkTpsStrategies(e, True)
+checkTpsResult(e, True)
 
 

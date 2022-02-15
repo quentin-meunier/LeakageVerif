@@ -26,6 +26,6 @@ n8 = n5 + n4 + n6 + n7
 
 #n8.dump('graph.dot')
 
-checkTpsStrategies(n8, True)
+checkTpsResult(n8, True)
 
 

@@ -9,7 +9,7 @@ a = symbol('a', 'P', 32)
 
 n = Extract(29, 22, LShR(a, 10))
 
-wres = Const(0, 8)
+wres = constant(0, 8)
 
 checkResults(n, wres, pei = True)
 

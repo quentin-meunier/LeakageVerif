@@ -13,10 +13,9 @@ n = symbol('n', 'M', 8)
 
 e = (~(k0 ^ m) + k1) & n
 
-# FIXME: currently not TPS
 #e.dump('graph.dot', True)
 
-checkTpsStrategies(e, True)
+checkTpsResult(e, True)
 
 
 

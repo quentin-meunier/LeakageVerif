@@ -5,9 +5,9 @@ from __future__ import print_function
 from leakage_verif import *
 
 
-m0 = Symb('m0', 'M', 8)
-m1 = Symb('m1', 'M', 8)
-k1 = Symb('k1', 'S', 8)
+m0 = symbol('m0', 'M', 8)
+m1 = symbol('m1', 'M', 8)
+k1 = symbol('k1', 'S', 8)
 
 
 
@@ -25,18 +25,18 @@ print('TPS : %r' % res)
 
 
 
-m0_0 = Symb('m0_0', 'M', 1)
-m0_1 = Symb('m0_1', 'M', 1)
-m0_2 = Symb('m0_2', 'M', 1)
-m0_3 = Symb('m0_3', 'M', 1)
-m0_4 = Symb('m0_4', 'M', 1)
-m0_5 = Symb('m0_5', 'M', 1)
-m0_6 = Symb('m0_6', 'M', 1)
-m0_7 = Symb('m0_7', 'M', 1)
+m0_0 = symbol('m0_0', 'M', 1)
+m0_1 = symbol('m0_1', 'M', 1)
+m0_2 = symbol('m0_2', 'M', 1)
+m0_3 = symbol('m0_3', 'M', 1)
+m0_4 = symbol('m0_4', 'M', 1)
+m0_5 = symbol('m0_5', 'M', 1)
+m0_6 = symbol('m0_6', 'M', 1)
+m0_7 = symbol('m0_7', 'M', 1)
 
-m1_4 = Symb('m1_4', 'M', 1)
+m1_4 = symbol('m1_4', 'M', 1)
 
-k1_4 = Symb('k1_4', 'S', 1)
+k1_4 = symbol('k1_4', 'S', 1)
 
 
 e = Concat(m0_2, m0_1, m0_0, m0_6, m0_5, (((((((((((((m0_7 ^ m0_3) & Concat((m1_4 ^ k1_4))) ^ m0_2) & Concat((m1_4 ^ k1_4))) ^ m0_1) & Concat((m1_4 ^ k1_4))) ^ m0_0) & Concat((m1_4 ^ k1_4))) ^ m0_3 ^ m0_6 ^ m0_7) & Concat((m1_4 ^ k1_4))) ^ m0_7 ^ m0_5 ^ m0_3) & Concat(m1_4)) ^ ((((((((((m0_7 ^ m0_3) & Concat((m1_4 ^ k1_4))) ^ m0_2) & Concat((m1_4 ^ k1_4))) ^ m0_1) & Concat((m1_4 ^ k1_4))) ^ m0_0) & Concat((m1_4 ^ k1_4))) ^ m0_3 ^ m0_6 ^ m0_7) & Concat((m1_4 ^ k1_4))) ^ m0_7 ^ m0_5 ^ ((((((((m0_7 ^ m0_3) & Concat((m1_4 ^ k1_4))) ^ m0_2) & Concat((m1_4 ^ k1_4))) ^ m0_1) & Concat((m1_4 ^ k1_4))) ^ m0_0) & Concat((m1_4 ^ k1_4))) ^ m0_6), m0_4, (((((((((((((((m0_7 ^ m0_3) & Concat(m1_4)) ^ m0_2) & Concat(m1_4)) ^ m0_1) & Concat(m1_4)) ^ m0_0) & Concat(m1_4)) ^ m0_3 ^ m0_6 ^ m0_7) & Concat(m1_4)) ^ m0_7 ^ m0_5 ^ ((((((((m0_7 ^ m0_3) & Concat(m1_4 ^ k1_4)) ^ m0_2) & Concat(m1_4 ^ k1_4)) ^ m0_1) & Concat(m1_4 ^ k1_4)) ^ m0_0) & Concat((m1_4 ^ k1_4))) ^ m0_6) & Concat(m1_4)) ^ m0_7 ^ m0_3 ^ m0_4) & m1_4) ^ m0_7 ^ m0_3))

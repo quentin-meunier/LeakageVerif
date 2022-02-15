@@ -18,6 +18,9 @@ e1 = SignExt(31, (Extract(0, 0, m1) ^ Extract(0, 0, k1)))
 
 res, time = checkTpsTransXorBit(e0, e1)
 
-print('TPS : %r' % res)
+if res:
+    print('OK')
+else:
+    print('KO')
 
 
