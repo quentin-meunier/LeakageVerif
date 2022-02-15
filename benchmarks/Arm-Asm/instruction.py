@@ -106,7 +106,6 @@ class Instruction:
         inst = Instruction(addr, 'strb', None, ra, rv, imm, None, None, 1, wbPre, wbPost)
         return inst
 
-    #FIXME fusionner avec l'instruction au dessus
     @staticmethod
     def makeStrbRegInst(addr, rd, ra, rb, wbPre, wbPost):
         inst = Instruction(addr, 'strb', rd, ra, rb, None, None, None, 1, wbPre, wbPost) 
@@ -144,7 +143,6 @@ class Instruction:
 
     @staticmethod
     def makeSbfxInst(addr, rd, ra, imm, width):
-        # FIXME: what passes on the bus?
         inst = Instruction(addr, 'sbfx', rd, ra, None, imm, None, width, None, None, None)
         return inst
 
@@ -155,7 +153,6 @@ class Instruction:
 
     @staticmethod
     def makeBlInst(addr):
-        # FIXME
         inst = Instruction(addr, 'bl', None, None, None, None, None, None, None, None, None)
         return inst
 
