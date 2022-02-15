@@ -1,0 +1,134 @@
+exp_single_article.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: KO (TPS missed)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: KO (TPS missed)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: KO (TPS missed)
+[START_AFTER_FAIL]: KO (TPS missed)
+[AFTER_REPLACE   ]: KO (TPS missed)
+Expected Result: TPS
+[TPS]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+multiple_1.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: OK (TPS)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: OK (TPS)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+Expected Result: TPS
+[TPS]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: OK (TPS)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: OK (TPS)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+xor_3_exps.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: OK (TPS)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: OK (TPS)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+xor_8_exps_article.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: KO (TPS missed)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: KO (TPS missed)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: KO (TPS missed)
+[START_AFTER_FAIL]: KO (TPS missed)
+[AFTER_REPLACE   ]: KO (TPS missed)
+Expected Result: TPS
+[TPS]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+xor_duplicated.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: KO (TPS missed)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: KO (TPS missed)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: KO (TPS missed)
+[START_AFTER_FAIL]: KO (TPS missed)
+[AFTER_REPLACE   ]: KO (TPS missed)
+Expected Result: TPS
+[TPS]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+xor_not_add_2.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: KO (TPS missed)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: KO (TPS missed)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: KO (TPS missed)
+[START_AFTER_FAIL]: KO (TPS missed)
+[AFTER_REPLACE   ]: KO (TPS missed)
+Expected Result: TPS
+[TPS]
+[START_REPLACE   ]: KO (TPS missed)
+[START           ]: KO (TPS missed)
+[REPLACE         ]: KO (TPS missed)
+[NONE            ]: KO (TPS missed)
+[AFTER_FAIL      ]: KO (TPS missed)
+[START_AFTER_FAIL]: KO (TPS missed)
+[AFTER_REPLACE   ]: KO (TPS missed)
+xor_not_add.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: OK (TPS)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: OK (TPS)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+Expected Result: TPS
+[TPS]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: OK (TPS)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: OK (TPS)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)
+xor_simple.py
+Expected Result: TPS
+[TpsOrig]
+[START_REPLACE   ]: OK (TPS)
+[START           ]: OK (TPS)
+[REPLACE         ]: OK (TPS)
+[NONE            ]: OK (TPS)
+[AFTER_FAIL      ]: OK (TPS)
+[START_AFTER_FAIL]: OK (TPS)
+[AFTER_REPLACE   ]: OK (TPS)

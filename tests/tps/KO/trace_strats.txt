@@ -1,0 +1,45 @@
+# Simplify
+# Replacement
+# Simplify
+# Failure
+# Return
+[START_REPLACE   ]: OK (not TPS)
+
+# Simplify
+# Replacement
+# Failure
+# Return
+[START           ]: OK (not TPS)
+
+# Replacement
+# Simplify
+# Failure
+# Return
+[REPLACE         ]: OK (not TPS)
+
+# Replacement
+# Failure
+# Return
+[NONE            ]: OK (not TPS)
+
+# Replacement
+# Failure
+# Simplify
+# Failure
+# Return
+[AFTER_FAIL      ]: OK (not TPS)
+
+# Simplify
+# Replacement
+# Failure
+# Simplify
+# Failure
+# Return
+[START_AFTER_FAIL]: OK (not TPS)
+
+# Replacement
+# Simplify
+# Failure
+# Return
+[AFTER_REPLACE   ]: OK (not TPS)
+
