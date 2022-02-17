@@ -79,7 +79,7 @@ LeakageVerif implements a wide range of simplifications, taking advantage of ope
 p0 = symbol('p0', 'P', 8)
 p1 = symbol('p1', 'P', 8)
 m = symbol('m', 'M', 8)
-e = ((p0 ^ m) | (p0 & constant(0, 8))) ^ (m & constant(0xFF, 8) + (p0 ^ p0))
+e = ((p0 ^ m) | (p1 & constant(0, 8))) ^ (m & constant(0xFF, 8) + (p0 ^ p0))
 simplifiedExp = simplify(e)
 print('simplifiedExp: %s' % simplifiedExp)
 ```
