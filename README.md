@@ -144,7 +144,7 @@ The main verification function, `checkTpsVal(e)` verifies the probing security o
 
 ## Benchmarks
 
-The `benchmarks` directory contains a few applications, while the `tests` directory contains smaller tests. Some of the benchmarks are taken from [MaskedVerifBench](https://www.url.com).
+The `benchmarks` directory contains a few applications, while the `tests` directory contains smaller tests. Some of the benchmarks are taken from [MaskedVerifBench](https://github.com/quentin-meunier/MaskedVerifBench).
 
 * AES-Herbst (from MaskedVerifBench): masked version of the AES following the scheme in [2], comprising the key schedule and ten rounds.
 * AES-SM (from MaskedVerifBench): masked implementation adapted from [3]. It implements the same masking scheme as the one in [2], but with a symbolic Galois field multiplication by constants 2 and 3 in the mix-columns step, and does not mask the key schedule.
