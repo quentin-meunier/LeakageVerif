@@ -1,5 +1,12 @@
 #!/usr/bin/python
 
+# Copyright (C) 2021, Sorbonne Universite, LIP6
+# This file is part of the LIP6DROMEL project, under the GPL v3.0 license
+# See https://www.gnu.org/licenses/gpl-3.0.en.html for license information
+# SPDX-License-Identifier: GPL-3.0-only
+# Author(s): Quentin L. Meunier
+
+
 from __future__ import print_function
 
 from config import *
@@ -53,7 +60,6 @@ def tpsRun(nodeIn):
     while True:
         #print('# Starting iteration %d' % cpt)
         #print('# e = %s' % node)
-        #node.dump('dot/graph_%d.dot' % cpt)
         cpt += 1
 
         if len(node.secretVarOcc) == 0:
@@ -69,7 +75,7 @@ def tpsRun(nodeIn):
         # - For this CTR Base, choose the CTR with the max height for the same count
         maskingMaskOcc = node.maskingMaskOcc
         otherMaskOcc = node.otherMaskOcc
-        minOcc = 1000000 # FIXME...
+        minOcc = 1000000
         selMask = None
         for m in maskingMaskOcc:
             if m in masksTaken:
@@ -123,8 +129,6 @@ def tpsRun(nodeIn):
 
         #print('# Replacing %s with %s' % (selCtr, selMask))
         #print('# and other occurrences of %s with %s' % (selMask, selCtr))
-
-        #node.dump('dot/graph_%d_end.dot' % (cpt - 1))
 
         # Simplify
         node = simplify(node)

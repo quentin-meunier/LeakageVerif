@@ -1,3 +1,8 @@
+# Copyright (C) 2021, Sorbonne Universite, LIP6
+# This file is part of the LIP6DROMEL project, under the GPL v3.0 license
+# See https://www.gnu.org/licenses/gpl-3.0.en.html for license information
+# SPDX-License-Identifier: GPL-3.0-only
+# Author(s): Inès Ben El Ouahma, Quentin L. Meunier
 
 from leakage_verif import *
 from instruction import *
