@@ -58,17 +58,17 @@ else:
 * `-`: arithmetic subtraction
 * `<<`: logical shift left. The shift amount must be a constant or a python integer, and cannot be symbolic.
 * `>>`: arithmetic shift right. The shift amount must be a constant or a python integer, and cannot be symbolic.
-* `\*`: finite field multiplication. Currently, it is only implemented on 8 bits, and with the irreducible polynomial 0x11B.
-* `\*\*`: integer multiplication, modulo 2 to the power of the expression width.
+* `*`: finite field multiplication. Currently, it is only implemented on 8 bits, and with the irreducible polynomial 0x11B.
+* `**`: integer multiplication, modulo 2 to the power of the expression width.
 
 Some operations are implemented in the form of functions:
 
 * `LShR(x, y)`: logical shift right. The shift amount y must be a constant or a python integer, and cannot be symbolic.
 * `RotateRight(x, y)`: right shift with rotation
 * `Concat(x, y, ...)`: concatenation of expressions
-* `Extract(msb, lsb, e)`: extraction of some of the bits in e, from the most significant bit given by msb, to the least significant bit given by lsb.
-* `ZeroExt(v, e)`: zero extension: extension of the expression e by the addition of v bits with value 0 on the left of e
-* `SignExt(v, e)`: signed extension: extension of the expression e by adding v time the MSB of e on its left
+* `Extract(msb, lsb, e)`: extraction of some of the bits in `e`, from the most significant bit given by msb, to the least significant bit given by lsb.
+* `ZeroExt(v, e)`: zero extension: extension of the expression `e` by the addition of v bits with value 0 on the left of `e`
+* `SignExt(v, e)`: signed extension: extension of the expression `e` by adding v time the MSB of `e` on its left
 
 ## Functionalities
 
