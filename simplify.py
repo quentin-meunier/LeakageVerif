@@ -79,8 +79,7 @@ def getBitDecompositionVar(node, msb = None, lsb = None):
     # If several bits, concat the single bits
     newChildren0 = []
     for i in range(msb, lsb - 1, -1):
-        s = node.symb + '#%d' % i
-        symb = SymbInternal(s, node.symbType, 1)
+        symb = getBitDecompositionVar(node, i, i)
         newChildren0.append(symb)
     return Concat(*newChildren0)
 

@@ -3,7 +3,6 @@
 from __future__ import print_function
 
 from leakage_verif import *
-from leakage_verif.simplify import *
 
 
 a = symbol('a', 'P', 32)

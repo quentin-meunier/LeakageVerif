@@ -167,10 +167,6 @@ def constant(val, width):
 def symbol(name, nature, width):
     return Symb(name, nature, width)
 
-def simplify(x):
-    import simplify
-    return simplify.simplify(x)
-
 
 def litteralInteger(e):
     from simplify import simplify

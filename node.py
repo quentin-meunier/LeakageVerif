@@ -47,7 +47,6 @@ class Node(object):
     preserveMaskingOps = ['~', 'A', '-']
         
     symb2node = {}
-    bitSymb2node = {}
     cst2node = {}
     str2node = {}
    
@@ -186,10 +185,6 @@ class Node(object):
             for a in n.children:
                 content += '   edge[tailclip=true];\n'
                 content += '   N%d -> N%d\n' % (n.num, a.num)
-            #if dumpParentEdges:
-            #    for a in n.parents:
-            #        content += '   edge[tailclip=true];\n'
-            #        content += '   N%d -> N%d [style="dashed"]\n' % (n.num, a.num)
         content += '}'
         f.write(content)
         f.close()
@@ -649,21 +644,10 @@ def Symb(symb, symbType, width):
 
 def SymbInternal(symb, symbType, width):
     if symb in Node.symb2node:
-        #if width != Node.symb2node[symb].width:
-        #    print('*** Error: symbol %s was already defined on %d bits' % (symb, Node.symb2node[symb].width))
-        #    sys.exit(1)
-        #if symbType != Node.symb2node[symb].symbType:
-        #    print('*** Error: symbol %s was already defined as having type %s' % (symb, Node.symb2node[symb].symbType))
-        #    sys.exit(1)
         return Node.symb2node[symb]
     else:
         n = SymbNode(symb, symbType, width)
         Node.symb2node[symb] = n
-        #if width != 1:
-        #    for i in range(width):
-        #        bitSymb = symb + '#%d' % i
-        #        bn = SymbNode(bitSymb, symbType, 1)
-        #        Node.bitSymb2node[bitSymb] = bn
         return n
 
 
