@@ -22,7 +22,7 @@ def checkTpsVal(e):
     if e.hasWordOp:
         resTps = False
         usedBitExp = False
-        if not e.wordAnalysisHasFailedOnSubExp:
+        if not e.wordAnalysisHasFailedOnSubExp or not bitExpEnable():
             resTps = tps(e)
             if not resTps:
                 e.wordAnalysisHasFailedOnSubExp = True

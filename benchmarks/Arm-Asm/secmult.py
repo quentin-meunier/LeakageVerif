@@ -2,7 +2,7 @@
 # This file is part of the LeakageVerif project, under the GPL v3.0 license
 # See https://www.gnu.org/licenses/gpl-3.0.en.html for license information
 # SPDX-License-Identifier: GPL-3.0-only
-# Author(s): Inès Ben El Ouahma, Quentin L. Meunier
+# Author(s): Ines Ben El Ouahma, Quentin L. Meunier
 
 from leakage_verif import *
 from instruction import *

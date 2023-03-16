@@ -126,7 +126,7 @@ def getBitDecomposition(node):
 
 
 
-def factorize(mulOp, newChildren, width):
+def factorize(mulOp, newChildren, width, addIsOr = True):
     hasChanged = True
     while hasChanged:
         hasChanged = False
@@ -144,6 +144,7 @@ def factorize(mulOp, newChildren, width):
                         # case  a ** b  +  a ** c  -> a ** (b + c)
                         # case  a &  b  |  a &  c  -> a &  (b | c)
                         # case (a |  b) & (a |  c) -> a |  (b & c)
+                        # case (a &  b) ^ (a &  c) -> a &  (b ^ c)
                         secndMul = newChildren[j]
                         k = 0
                         while k < len(firstMul.children):
@@ -170,10 +171,12 @@ def factorize(mulOp, newChildren, width):
                                         xorNode = simplify(xorLeftNode ^ xorRighNode)
                                     elif mulOp == '**':
                                         xorNode = simplify(xorLeftNode + xorRighNode)
-                                    elif mulOp == '&':
-                                        xorNode = simplify(xorLeftNode | xorRighNode)
                                     elif mulOp == '|':
                                         xorNode = simplify(xorLeftNode & xorRighNode)
+                                    elif mulOp == '&' and addIsOr:
+                                        xorNode = simplify(xorLeftNode | xorRighNode)
+                                    elif mulOp == '&' and not addIsOr:
+                                        xorNode = simplify(xorLeftNode ^ xorRighNode)
                                     newGrandChildren = [factor, xorNode]
                                     break
                                 l += 1
@@ -188,9 +191,9 @@ def factorize(mulOp, newChildren, width):
                         k = 0
                         while k < len(firstMul.children):
                             if equivalence(firstMul.children[k], newChildren[j]):
-                                hasChanged = True
                                 newGrandChildren = None
                                 if mulOp == '*' or mulOp == '**':
+                                    hasChanged = True
                                     factor = newChildren[j]
                                     # Determining the xor operands
                                     xorLeftChildren = list(firstMul.children)
@@ -205,8 +208,12 @@ def factorize(mulOp, newChildren, width):
                                     elif mulOp == '**':
                                         xorNode = simplify(xorLeftNode + Const(0x1, width))
                                     newGrandChildren = [factor, xorNode]
-                                else:
+                                elif mulOp == '|' or (mulOp == '&' and addIsOr):
+                                    hasChanged = True
                                     newChildren.pop(i)
+                                elif mulOp == '&' and not addIsOr:
+                                    pass
+                                    # Do (a & b) ^ a -> a & ~b ?
                                 break
                             k += 1
                     if hasChanged and newGrandChildren != None:
@@ -792,7 +799,6 @@ def simplifyCore(node, propagateExtractInwards, useSingleBitVariables):
         # Done here because removing '~' node can make new '^' nodes as children
         # (Note those '^' nodes should not have any '~' children)
         if len(newChildren) > 0:
-            tempNode = OpNode('^', newChildren)
             newChildren, m = mergeWithChildrenIfPossible('^', newChildren)
             modified = modified or m
             #print_level(4, 'modified: %s' % modified)
@@ -847,6 +853,8 @@ def simplifyCore(node, propagateExtractInwards, useSingleBitVariables):
         # = c * (a ^ b) ^ a * b
         if node.hasWordOp:
             factorize('*', newChildren, width)
+
+        factorize('&', newChildren, width, False)
 
         # Final considerations
         if len(newChildren) == 0:

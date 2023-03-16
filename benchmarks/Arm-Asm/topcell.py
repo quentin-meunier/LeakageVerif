@@ -212,7 +212,7 @@ class Topcell:
             regfileNew[regWB] = simplify(regfileNew[regWB])
 
             if self.debug:
-                print('# r%d <- 0x%x [WB %s]' % (regWB, int(str(regfileNew[regWB])), wbPre and 'Pre' or 'Post'))
+                print('# r%d <- 0x%x [WB %s]' % (regWB, int(str(regfileNew[regWB]), 16), wbPre and 'Pre' or 'Post'))
 
         if inst.isLoad():
             baseAddr = regfile[ra]

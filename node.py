@@ -611,7 +611,7 @@ class OpNode(Node):
             res = 'LShR(' + self.children[0].expPrint(False, verbatim) + ', ' + str(self.children[1].cst) + ')'
             return res
         elif (self.op == '>>' or self.op == '<<'):
-            res = self.children[0].expPrint(False, verbatim) + ' ' + self.op + ' ' + str(self.children[1].cst)
+            res = self.children[0].expPrint(True, verbatim) + ' ' + self.op + ' ' + str(self.children[1].cst)
             if parNeeded:
                 res = '(' + res + ')'
             return res

@@ -31,7 +31,6 @@ def getReplacedGraph(node, selMask, childToReplace):
             if child is childToReplace:
                 children.append(selMask)
                 continue
-            #if selMask in child.maskVarOcc:
             if selMask in child.maskingMaskOcc or selMask in child.otherMaskOcc:
                 newChild = getReplacedGraphRec(child, selMask, childToReplace, m)
                 children.append(newChild)
@@ -67,6 +66,7 @@ def tpsRun(nodeIn):
             return True
        
         if len(node.currentlyMasking) != 0:
+            #print('# Masking mask')
             return True
  
         # Choice of CTR:
@@ -97,7 +97,7 @@ def tpsRun(nodeIn):
                 selMask = m
 
         if selMask == None:
-            #print('# No mask can be taken')
+            #print('# No mask can be taken... return False')
             return False
 
         #print('# Choosing mask %s (number of parent nodes: %d)' % (selMask, minOcc))

@@ -41,7 +41,7 @@ def registerArray(name, inWidth, outWidth, addr, size, func):
     arr = MemArray(name, inWidth, outWidth, addr, size, func)
 
     if addr != None:
-        print('registering array %s at address %x' % (name, addr))
+        #print('registering array %s at address %x' % (name, addr))
         registeredArraysByAddr[addr] = arr
     registeredArraysByName[name] = arr
     registeredArrays.add(arr)
