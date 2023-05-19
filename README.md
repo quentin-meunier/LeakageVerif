@@ -4,9 +4,9 @@ LeakageVerif is a formal verification tool for the probing security of masked im
 
 LeakageVerif is a python library offering a set of constructs and functions for writing and verifying symbolic expressions. A symbolic expression in LeakageVerif is a fixed width expression comprising operations on constants and symbolic variables. Each symbolic variable has a type between secret, mask and public. LeakageVerif verifies that the distribution of the expression value is independent from the secret values it contains, considering that mask variables follow an random uniform distribution.
 
-This work is currently under review and has been published as a preprint under the following reference:  
-Meunier, Q. L., Pons, E. and Heydemann, K. (2021). LeakageVerif: Scalable and Efficient Leakage Verification in Symbolic Expressions". Cryptology ePrint Archive (2021).
-[Link](https://eprint.iacr.org/2021/1468)
+This work is currently has been published under the following reference:
+Q. L. Meunier, E. Pons and K. Heydemann, "LeakageVerif: Efficient and Scalable Formal Verification of Leakage in Symbolic Expressions," in IEEE Transactions on Software Engineering, doi: 10.1109/TSE.2023.3252671.
+[Link](https://ieeexplore.ieee.org/abstract/document/10059223)
 
 
 ## Installation
